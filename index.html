@@ -42,82 +42,18 @@
 
 
     <div class="container" id="allData">
-      <!-- Timeblocks go here -->
-  <!--    <div class="row">
-     <div class="col-sm-2" style="background-color:lavender;">9am</div>
-     <textarea class="col-sm-8" style="background-color:lavenderblush;">Text Goes Here </textarea>
-     <div class="col-sm-2" style="background-color:lavender;">Save Goes Here</div>
-   </div>
-
-   <div class="row">
-      <div class="col-sm-2" style="background-color:lavender;">Number Goes Here</div>
-      <div class="col-sm-8" style="background-color:lavenderblush;">Text Goes Here </div>
-      <div class="col-sm-2" style="background-color:lavender;">Save Goes Here</div>
-    </div>
-
-    <div class="row">
-       <div class="col-sm-2" style="background-color:lavender;">Number Goes Here</div>
-       <div class="col-sm-8" style="background-color:lavenderblush;">Text Goes Here </div>
-       <div class="col-sm-2" style="background-color:lavender;">Save Goes Here</div>
-     </div>
-
-     <div class="row">
-        <div class="col-sm-2" style="background-color:lavender;">Number Goes Here</div>
-        <div class="col-sm-8" style="background-color:lavenderblush;">Text Goes Here </div>
-        <div class="col-sm-2" style="background-color:lavender;">Save Goes Here</div>
-      </div>
-
-      <div class="row">
-         <div class="col-sm-2" style="background-color:lavender;">Number Goes Here</div>
-         <div class="col-sm-8" style="background-color:lavenderblush;">Text Goes Here </div>
-         <div class="col-sm-2" style="background-color:lavender;">Save Goes Here</div>
-       </div>
-
-       <div class="row">
-          <div class="col-sm-2" style="background-color:lavender;">Number Goes Here</div>
-          <div class="col-sm-8" style="background-color:lavenderblush;">Text Goes Here </div>
-          <div class="col-sm-2" style="background-color:lavender;">Save Goes Here</div>
-        </div>
-
-        <div class="row">
-           <div class="col-sm-2" style="background-color:lavender;">Number Goes Here</div>
-           <div class="col-sm-8" style="background-color:lavenderblush;">Text Goes Here </div>
-           <div class="col-sm-2" style="background-color:lavender;">Save Goes Here</div>
-         </div>
-
-         <div class="row">
-            <div class="col-sm-2" style="background-color:lavender;">Number Goes Here</div>
-            <div class="col-sm-8" style="background-color:lavenderblush;">Text Goes Here </div>
-            <div class="col-sm-2" style="background-color:lavender;">Save Goes Here</div>
-          </div>
-
-          <div class="row">
-             <div class="col-sm-2" style="background-color:lavender;">Number Goes Here</div>
-             <div class="col-sm-8" style="background-color:lavenderblush;">Text Goes Here </div>
-             <div class="col-sm-2" style="background-color:lavender;">Save Goes Here</div>
-           </div> -->
-
-
-    <!--End of Timeblocks -->
-    </div>
-    <!--End of Timeblock -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
 
 
 
-      var showDay =   moment().format('MM/DD/YYYY');
+      var showDay =   moment().format('dddd, MMMM Do');
       console.log(showDay);
 
     $("#currentDay").text(showDay);
 
 
- //    <div class="row">
- //   <div class="col-sm-2" style="background-color:lavender;">9am</div>
- //   <textarea class="col-sm-8" style="background-color:lavenderblush;">Text Goes Here </textarea>
- //   <div class="col-sm-2" style="background-color:lavender;">Save Goes Here</div>
- // </div>
-var times = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM"]
+var times = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"]
  for(var i = 0; i < times.length; i++){
    var row = $("<div></div>")
    row.addClass( "row" );
@@ -152,11 +88,13 @@ var userTextArea = $(this).siblings(":nth-child(2)").val();
 console.log(userTextArea);
 
   // put that value into localstorage
+  localStorage.setItem('userTextArea', "save");
+  document.getElementById('button').innerHTML = localStorage.getItem('userTextArea');
 })
 
 
   </script>
-
+</div>
 
 
 
